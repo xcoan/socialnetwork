@@ -1,0 +1,17 @@
+
+<%= render 'layouts/newthought' %>
+
+<table>
+  <% @thoughts.each do |thought| %>
+    <tr>
+      <td>
+        <%= User.find(thought.user_id).username %>
+      </td>
+    </tr>
+    <tr><td><%= thought.idea %></td></tr>
+    <tr>
+      <td><hr /></td>
+    </tr>
+  <% end %>
+</table>
+</div>

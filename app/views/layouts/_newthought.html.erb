@@ -1,0 +1,12 @@
+<%= form_for :thought, url: thoughts_path do |f| %>
+
+
+  <p>
+    <%= f.label "Thought" %><br>
+    <%= f.text_area :idea %>
+  </p>
+
+  <p>
+    <%= f.submit "Think!" %>
+  </p>
+<% end %>
