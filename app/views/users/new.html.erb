@@ -1,0 +1,26 @@
+<div class="newuserform">
+  <h1>Signup New User</h1>
+  <%= form_for @user do |f| %>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name, :autofocus => true %>
+    </p>
+
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+
+    <p>
+      <%= f.label :email %><br>
+      <%= f.email_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </p>
+    <%= f.submit "Create" %>
+  <% end %>
+
+</div>

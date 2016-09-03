@@ -1,0 +1,24 @@
+<div class="navbar_holder">
+  <div class="navbar">
+    <ul>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <% if current_user %>
+        <li>
+          Welcome, <%= current_user.username %>
+        </li>
+        <li>
+          <%= link_to "Sign Out", logout_path %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign Up", signup_path %>
+        </li>
+        <li>
+          <%= link_to "Log in", login_path %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
