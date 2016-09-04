@@ -5,7 +5,7 @@
   <% @thoughts.each do |thought| %>
     <tr>
       <td>
-        <%= User.find(thought.user_id).username %>
+        <%= link_to User.find(thought.user_id).username, controller: 'users', action: 'show', username: User.find(thought.user_id).username %>
       </td>
     </tr>
     <tr><td><%= thought.idea %></td></tr>

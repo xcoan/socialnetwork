@@ -18,4 +18,7 @@ Rails.application.routes.draw do
 
   # logout
   get 'logout' => 'sessions#destroy'
+
+  # user profile by username
+  get '/:username' => 'users#show'
 end

@@ -13,6 +13,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    if User.find_by username: params[:username]
+      @user = User.find_by_username(params[:username])
+      @thoughts = @user.thoughts
+    else
+      redirect_to thoughts_path
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :username, :email, :password)
