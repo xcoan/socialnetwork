@@ -13,12 +13,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
+  def profile
     if User.find_by username: params[:username]
       @user = User.find_by_username(params[:username])
       @thoughts = @user.thoughts
     else
-      redirect_to thoughts_path
+      redirect_to controller: 'pages', action: 'invalid'
     end
   end
 

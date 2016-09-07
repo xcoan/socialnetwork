@@ -1,3 +1,36 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page_top {
+  text-align: center;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+
+.forms {
+  height: 80%;
+}
+
+.right {
+  height: 100%;
+  float: right;
+  border: 1px solid;
+  width: 49.5%;
+}
+
+.left {
+  height: 100%;
+  float: left;
+  width: 49.5%;
+  border: 1px solid;
+}
+
+.front_page_login {
+  text-align: center;
+  position: relative;
+}
+
+.front_page_signup {
+  text-align: center;
+  position: relative;
+}

@@ -3,7 +3,6 @@ class User < ApplicationRecord
 
   has_many :thoughts
 
-
   validates_uniqueness_of :username, :message => Proc.new { |error, attributes|
     "#{attributes[:value]} has already been taken."
   }

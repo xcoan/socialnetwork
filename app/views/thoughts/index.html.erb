@@ -2,13 +2,18 @@
 <%= render 'layouts/newthought' %>
 
 <table>
-  <% @thoughts.each do |thought| %>
+  <% @thoughts.reverse_each do |thought| %>
     <tr>
       <td>
-        <%= link_to User.find(thought.user_id).username, controller: 'users', action: 'show', username: User.find(thought.user_id).username %>
+        <%= link_to User.find(thought.user_id).username, controller: 'users', action: 'profile', username: User.find(thought.user_id).username %>
       </td>
     </tr>
     <tr><td><%= thought.idea %></td></tr>
+    <tr>
+      <td>
+        <%= thought.updated_at.strftime("%l:%M%p %Z on %D") %>
+      </td>
+    </tr>
     <tr>
       <td><hr /></td>
     </tr>

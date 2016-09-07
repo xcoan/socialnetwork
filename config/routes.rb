@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, :thoughts
+  resources :users
+  resources :thoughts
 
   # home page
   root 'pages#index'
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
   # create new user
   get 'signup' => 'users#new'
 
+  # 404 pages
+  get 'invalid' => 'pages#invalid'
 
   # signup new user
   get 'signup' => 'users#new'
@@ -20,5 +23,6 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
 
   # user profile by username
-  get '/:username' => 'users#show'
+  get '/:username' => 'users#profile'
+
 end

@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  invalid:
+    404_error: "404 Error"
+    url_not_exist: "Oh dear, we seem to be braindead! The URL you were trying to reach doesn't seem to exist."
