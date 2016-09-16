@@ -1,3 +1,18 @@
 // Place all the styles related to the thoughts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.thoughts {
+  border: 1px solid;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+  #idea {
+    font-size: x-large;
+  }
+  #time {
+    font-size: x-small;
+  }
+}

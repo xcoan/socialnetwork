@@ -4,27 +4,17 @@
   </p>
 
 <% else %>
-  <table>
-    <% @thoughts.each do |f| %>
-       <tr>
-         <td>
-           <%= link_to User.find(f.user_id).username, controller: 'users', action: 'profile', username: User.find(f.user_id).username %>
-       </tr>
-       <tr>
-         <td>
-           <%= f.idea %>
-         </td>
-       </tr>
-       <tr>
-         <td>
-           <%= f.updated_at.strftime("%l:%M%p %Z on %D") %>
-         </td>
-       </tr>
-       <tr>
-         <td>
-           <hr />
-         </td>
-       </tr>
-     <% end %>
-  </table>
+  <% @thoughts.each do |f| %>
+    <div class="thoughts">
+      <p>
+        <%= link_to User.find(f.user_id).username, controller: 'users', action: 'profile', username: User.find(f.user_id).username %>
+      </p>
+      <p id="idea">
+        <%= f.idea %>
+      </p>
+      <p id="time">
+        <%= f.updated_at.strftime("%l:%M%p %Z on %D") %>
+      </p>
+    </div>
+   <% end %>
 <% end %>

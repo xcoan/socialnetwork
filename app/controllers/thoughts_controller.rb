@@ -1,7 +1,6 @@
 class ThoughtsController < ApplicationController
   def new
     @thought = Thought.new
-    @comment = Brainstorm.new(thought_id: params[:id])
   end
 
   def edit

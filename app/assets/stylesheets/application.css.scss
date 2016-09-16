@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+body {
+  padding: 70px 10px 10px;
+  background-color: #e9ebee;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default {
+  background-color: mediumpurple;
+  .navbar-brand {
+    color: white;
+  }
+  .dropdown a {
+    color: white;
+  }
+  .navbar-nav {
+    a {
+      color: black;
+    }
+  }
+}
+
+.thoughtform {
+  text-align: center;
+  width: 100%;
+  border: 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.newthought {
+  width: 99%;
+  height: 80px;
+  resize: none;
+}
+
+.submitbutton {
+  background-color: mediumpurple;
+  color: white;
+}

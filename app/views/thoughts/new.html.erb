@@ -1,25 +1,27 @@
-<h1>New Thought</h1>
-<%= form_for :thought, url: thoughts_path do |f| %>
+<div class="thoughtform">
+  <h1>New Thought</h1>
+  <%= form_for :thought, url: thoughts_path do |f| %>
 
-<% if @thought.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@thought.errors.count, "error") %>
-      </h2>
-      <ul>
-        <% @thought.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+  <% if @thought.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@thought.errors.count, "error") %>
+        </h2>
+        <ul>
+          <% @thought.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= f.text_area :idea, :class => "newthought" %>
+    </p>
+
+    <p>
+      <%= f.submit "Think!", :class => "submitbutton" %>
+    </p>
   <% end %>
 
-  <p>
-    <%= f.label "Thought" %><br>
-    <%= f.text_area :idea %>
-  </p>
-
-  <p>
-    <%= f.submit "Think!" %>
-  </p>
-<% end %>
+</div>
