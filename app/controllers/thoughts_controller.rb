@@ -1,4 +1,7 @@
 class ThoughtsController < ApplicationController
+
+  before_action :require_user
+
   def new
     @thought = Thought.new
   end

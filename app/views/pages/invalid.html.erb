@@ -1,5 +1,9 @@
-<h1>Error 404</h1>
-
-<p>
-  The URL you tried to get to doesn't exist here! Try again or Return <%= link_to "home", root_path %>?
-</p>
+<div class="errorpage">
+  <h1>Error 404!</h1>
+  <p>
+    😁 It seems the page you were trying to access doesn't exist! Why don't you try returning home?
+  </p>
+  <p>
+    <button class="submitbutton"><%=link_to "Return home", root_path %></button>
+  </p>
+</div>

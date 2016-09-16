@@ -19,7 +19,7 @@
 
 body {
   padding: 70px 10px 10px;
-  background-color: #e9ebee;
+  background-color: #dbdbdb;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -47,7 +47,7 @@ body {
   border: 1px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   margin-bottom: 15px;
-  background-color: white;
+  background-color: #f3f3f3;
 }
 
 .newthought {
@@ -59,4 +59,7 @@ body {
 .submitbutton {
   background-color: mediumpurple;
   color: white;
+  a {
+    color: white;
+  }
 }

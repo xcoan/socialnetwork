@@ -1,5 +1,5 @@
 <div class="page_top">
-  <h1>Welcome to the Cortex!</h1>
+  <h1>Welcome to The Neural Network</h1>
 
   <p>
     We noticed that you aren't logged in! Why don't you Signup or Sign in?
@@ -44,9 +44,15 @@
     <div class='front_page_login'>
       <h1>Log in!</h1>
       <%= form_for(:session, url: login_path) do |f| %>
+      <p>
         <%= f.email_field :email, :placeholder => "Email" %><br />
+      </p>
+      <p>
         <%= f.password_field :password, :placeholder => "Password" %><br />
+      </p>
+      <p>
         <%= f.submit "Log in", class: "btn-submit" %>
+      </p>
       <% end %>
     </div>
   </div>
