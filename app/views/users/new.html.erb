@@ -20,24 +20,24 @@
 
     <p>
       <%= f.label :name %><br />
-      <%= f.text_field :name, :autofocus => true %>
+      <%= f.text_field :name, :autofocus => true, class: "userbox" %>
     </p>
 
     <p>
       <%= f.label :username %><br />
-      <%= f.text_field :username %>
+      <%= f.text_field :username, class: "userbox" %>
     </p>
 
     <p>
       <%= f.label :email %><br>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: "userbox" %>
     </p>
 
     <p>
       <%= f.label :password %><br>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: "userbox" %>
     </p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Create Profile", class: "userbutton" %>
   <% end %>
 
 </div>

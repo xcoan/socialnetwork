@@ -1,0 +1,38 @@
+<div class="newuserform">
+  <h1>Edit Profile</h1>
+
+  <%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+
+    <div class="errors">
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@user.errors.count, "error") %>
+          </h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "userbox" %>
+    </p>
+
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "userbox" %>
+    </p>
+
+
+    <p>
+      <%= f.submit "Edit Profile", class: "userbutton" %>
+    </p>
+
+  <% end %>
+
+</div>
