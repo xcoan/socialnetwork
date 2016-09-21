@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   # home page
   root 'pages#index'
+  post "/" => 'pages#index'
 
   # create new user
   get 'signup' => 'users#new'
+  get '/users/new' => 'users#new'
 
   # 404 pages
   get 'invalid' => 'pages#invalid'

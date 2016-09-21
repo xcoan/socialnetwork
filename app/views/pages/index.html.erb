@@ -13,7 +13,7 @@
 
     <div class="front_page_signup">
       <h1>Signup New User</h1>
-      <%= form_for :user, url: new_user_path do |f| %>
+      <%= form_for @user do |f| %>
 
         <p>
           <%= f.label :name %><br />
