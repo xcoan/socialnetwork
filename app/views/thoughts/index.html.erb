@@ -1,6 +1,7 @@
 
 <%= render 'layouts/newthought' %>
 
+  <%= will_paginate @thoughts %>
   <% @thoughts.reverse_each do |thought| %>
   <div class="thoughts">
     <p>

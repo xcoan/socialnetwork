@@ -28,7 +28,7 @@ class ThoughtsController < ApplicationController
   end
 
   def index
-    @thoughts = Thought.all
+    @thoughts = Thought.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
