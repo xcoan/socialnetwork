@@ -1,7 +1,9 @@
 <% if @thoughts.empty? %>
-  <p>
-    It looks like <%= @user.username %> hasn't submitted a thought yet 😕
-  </p>
+  <div class="nothought">
+    <p>
+      It looks like <%= @user.username %> hasn't submitted a thought yet 😕
+    </p>
+  </div>
 
 <% else %>
   <%= will_paginate @thoughts %>
