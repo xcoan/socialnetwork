@@ -11,7 +11,7 @@ class ThoughtsController < ApplicationController
   end
 
   def update
-    @Thought = Thought.find(params[:id])
+    @thought = Thought.find(params[:id])
 
     if @thought.update(thought_params)
       redirect_to thoughts_path

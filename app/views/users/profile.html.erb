@@ -5,7 +5,7 @@
 
 <% else %>
   <%= will_paginate @thoughts %>
-  <% @thoughts.each do |f| %>
+  <% @thoughts.reverse_each do |f| %>
     <div class="thoughts">
       <p>
         <%= link_to User.find(f.user_id).username, controller: 'users', action: 'profile', username: User.find(f.user_id).username %>
@@ -16,6 +16,13 @@
       <p id="time">
         <%= f.updated_at.strftime("%l:%M%p %Z on %D") %>
       </p>
+      <div class = "thought_operations">
+        <% if current_user.id == f.user_id %>
+          <button><%= link_to "Edit", edit_thought_path(f) %></button>
+          <button><%= link_to "Delete", thought_path(f), method: :delete,
+            data: { confirm: 'Are you sure you want to delete this thought?' } %></button>
+        <% end %>
+      </div>
     </div>
    <% end %>
 <% end %>

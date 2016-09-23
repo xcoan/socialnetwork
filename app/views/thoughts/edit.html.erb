@@ -1,0 +1,29 @@
+<div class="thoughtform">
+  <h1>New Thought</h1>
+  <%= form_for :thought, url: thought_path(@thought), method: :patch do |f| %>
+
+  <% if @thought.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@thought.errors.count, "error") %>
+        </h2>
+        <ul>
+          <% @thought.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= f.text_area :idea, :class => "newthought" %>
+    </p>
+
+    <p>
+      <%= f.submit "Think!", :class => "submitbutton" %>
+    </p>
+  <% end %>
+
+  <%= link_to "Return to Thoughts Index", thoughts_path %>
+
+</div>
