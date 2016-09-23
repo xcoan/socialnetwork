@@ -32,9 +32,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
-    # Only allows you to edit your own profile
-    if current_user != @user
+    if User.exists?(params[:id])
+      @user = User.find(params[:id])
+      # Only allows you to edit your own profile
+      if current_user != @user
+        redirect_to root_path
+      end
+    else
       redirect_to root_path
     end
   end

@@ -7,7 +7,14 @@ class ThoughtsController < ApplicationController
   end
 
   def edit
-    @thought = Thought.find(params[:id])
+    if Thought.exists?(params[:id])
+      @thought = Thought.find(params[:id])
+      if @thought.user_id != current_user.id
+        redirect_to root_path
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   def update
