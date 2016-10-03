@@ -5,12 +5,15 @@
 .newuserform {
   text-align: center;
   border: 1px solid;
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   .userbox {
     width: 33%;
   }
   .userbutton {
     background-color: mediumpurple;
     color: white;
+    margin-bottom: 10px;
   }
 }
 
