@@ -9,11 +9,23 @@
   width: 100%;
   background-color: #f3f3f3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-  #idea {
-    font-size: x-large;
+  .idea_text {
+    #idea {
+      font-size: x-large;
+    }
+    #time {
+      font-size: x-small;
+    }
   }
-  #time {
-    font-size: x-small;
+  .gravatar_pane {
+    float: left;
+
+    #gravatar {
+      img {
+        height: 80px;
+        padding-bottom: 20px;
+      }
+    }
   }
   .thought_operations {
     text-align: center;

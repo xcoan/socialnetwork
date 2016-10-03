@@ -1,3 +1,24 @@
+<div class="profileframe">
+  <div class="gravatar_profile_frame">
+    <p id="gravatar">
+      <%= image_tag @user.gravatar_url %>
+    </p>
+  </div>
+
+  <div class="profile_info">
+    <p>
+      <%= @user.username %>
+    </p>
+    <p>
+      <% if @user.thoughts.count == 1 %>
+        <%= @user.thoughts.count %> thought submitted.
+      <% else %>
+        <%= @user.thoughts.count %> thoughts submitted.
+      <% end %>
+    </p>
+  </div>
+</div>
+
 <% if @thoughts.empty? %>
   <div class="nothought">
     <p>
@@ -12,12 +33,19 @@
       <p>
         <%= link_to User.find(f.user_id).username, controller: 'users', action: 'profile', username: User.find(f.user_id).username %>
       </p>
-      <p id="idea">
-        <%= f.idea %>
-      </p>
-      <p id="time">
-        <%= f.updated_at.strftime("%l:%M%p %Z on %D") %>
-      </p>
+      <div class="gravatar_pane">
+        <p id="gravatar">
+          <%= image_tag @user.gravatar_url %>
+        </p>
+      </div>
+      <div class="idea_text">
+        <p id="idea">
+          <%= f.idea %>
+        </p>
+        <p id="time">
+          <%= f.updated_at.strftime("%l:%M%p %Z on %D") %>
+        </p>
+      </div>
       <div class = "thought_operations">
         <% if current_user.id == f.user_id %>
           <button><%= link_to "Edit", edit_thought_path(f) %></button>
