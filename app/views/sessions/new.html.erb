@@ -3,10 +3,12 @@
 
   <%= form_for(:session, url: login_path) do |f| %>
     <p>
-      <%= f.email_field :email, :placeholder => "Email" %><br />
+      <%= f.label :email %> <br />
+      <%= f.email_field :email %><br />
     </p>
     <p>
-      <%= f.password_field :password, :placeholder => "Password" %><br />
+      <%= f.label :password %> <br />
+      <%= f.password_field :password %><br />
     </p>
     <%= f.submit "Log in", class: "userbutton" %>
   <% end %>

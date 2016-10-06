@@ -12,7 +12,7 @@
   <div class="left">
 
     <div class="front_page_signup">
-      <h1>Signup New User</h1>
+      <h1>Sign Up New User</h1>
       <%= form_for @user do |f| %>
 
         <p>
@@ -44,13 +44,15 @@
 
   <div class="right">
     <div class='front_page_login'>
-      <h1>Log in!</h1>
+      <h1>Log in</h1>
       <%= form_for(:session, url: login_path) do |f| %>
       <p>
-        <%= f.email_field :email, :placeholder => "Email" %><br />
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
       </p>
       <p>
-        <%= f.password_field :password, :placeholder => "Password" %><br />
+        <%= f.label :password %><br />
+        <%= f.password_field :password %><br />
       </p>
       <p>
         <%= f.submit "Log in", class: "userbutton" %>
