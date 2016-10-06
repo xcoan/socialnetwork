@@ -17,6 +17,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.nav_gravatar {
+  height: 50px;
+}
+
 body {
   padding: 70px 10px 10px;
   background-color: #dbdbdb;
