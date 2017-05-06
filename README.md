@@ -1,24 +1,21 @@
-# README
+# xcoan/socialnetwork
+A Twitter-esque application built on rails as a learning experience.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## How to run
+1. `git clone`
+2. `cd socialnetwork`
+3. `bundle`
+4. `rake db:migrate`
+5. `rails server`
 
-* Ruby version
 
-* System dependencies
+## Specs
+Built using Ruby 2.4.1 on Rails 5.0.
 
-* Configuration
+Postgresql db.
 
-* Database creation
+User profile pictures are called from [Gravatar](http://en.gravatar.com/).
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## The future
+I'd like to one day get mobile companion apps set up that can transfer data using AJAX calls.

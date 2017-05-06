@@ -7,12 +7,12 @@
   <br />
 </div>
 
-<div class= "forms">
+<div class="container-fluid">
 
-  <div class="left">
-
-    <div class="front_page_signup">
-      <h1>Sign Up New User</h1>
+  <div class="row">
+    <div class="col-md-5" id="pane">
+      <h2>Sign Up New User</h2>
+      <hr />
       <%= form_for @user do |f| %>
 
         <p>
@@ -40,11 +40,13 @@
       <% end %>
     </div>
 
-  </div>
+    <div class="col-md-2">
 
-  <div class="right">
-    <div class='front_page_login'>
-      <h1>Log in</h1>
+    </div>
+
+    <div class="col-md-5" id="pane">
+      <h2>Sign In</h2>
+      <hr />
       <%= form_for(:session, url: login_path) do |f| %>
       <p>
         <%= f.label :email %><br />

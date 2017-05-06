@@ -1,6 +1,7 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .userbutton {
   background-color: mediumpurple;
   color: white;
@@ -13,37 +14,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-.forms {
-
-}
-
-.right {
-  min-height: 354px;
-  float: right;
-  border: 1px solid;
-  width: 49.5%;
-  background-color: #f3f3f3;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-}
-
-.left {
-  min-height: 354px;
-  height: 100%;
-  float: left;
-  width: 49.5%;
+#pane {
+  text-align: center;
+  min-height: 400px;
   border: 1px solid;
   background-color: #f3f3f3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-}
-
-.front_page_login {
-  text-align: center;
-  position: relative;
-}
-
-.front_page_signup {
-  text-align: center;
-  position: relative;
+  margin-bottom: 20px;
 }
 
 .errorpage {
